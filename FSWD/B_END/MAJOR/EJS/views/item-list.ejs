@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ITEMS LIST</title>
+        <link href="/list-style.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="container">
+            <h1> ITEMS LIST</h1>
+
+            <a href="/items/new" class="add-item-btn">ADD ITEM</a>
+
+            <table>
+
+                <tr>
+                    <th>NAME</th>
+                    <th>TOPPINGS</th>
+                    <th>CHARACTERISTICS</th>
+                    <th>COST</th>
+                </tr>
+                <% items.forEach(item => {%>
+                    <tr>
+                        <td><%= item.name %></td>
+                        <td><%= item.toppings %></td>
+                        <td><%= item.characteristics %></td>
+                        <td><%= item.cost %></td>
+
+
+                        <td class="actions">
+                            <a href="/items/<%= item._id %>/edit">EDIT</a> 
+                            <form action="/items/<%= item._id %>?_method=DELETE" method="post">
+                                <button type="submit" class="delete-btn">DELETE</button>
+                            </form>
+
+                        </td>
+                    </tr>
+                <%})  %>
+
+            </table>
+
+        </div>
+    </body>
+</html>

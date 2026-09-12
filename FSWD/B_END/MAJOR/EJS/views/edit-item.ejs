@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Item</title>
+    <link href="/form-style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Item</h1>
+
+
+
+
+        <form action="/items/<%= item._id %>?_method=PUT" method="post">
+
+
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="<%= item.name %>" required>
+            </div>
+
+
+
+
+            <div>
+                <label for="toppings">Toppings</label>
+                <input type="text" id="toppings" name="toppings" value="<%= item.toppings %>" required>
+            </div>
+
+
+            <div>
+                <label for="characteristics">characteristics:</label>
+                <input type="text" id="characteristics" name="characteristics" value="<%= item.characteristics %>" required>
+            </div>
+
+            <div>
+                <label for="cost">Cost:</label>
+                <input type="text" id="cost" name="cost" value="<%= item.cost %>" required>
+            </div>
+
+
+
+
+            <button type="submit"> Update</button>
+
+
+        </form>
+
+
+
+
+        <% if(errors){%>
+            <div class="error">
+                <h3>Error(s) : </h3>
+
+
+<ul>
+                <% errors.forEach(error => {%>
+                    <li> <%= error.msg  %></li>
+                <%}) %>
+
+
+                </ul>
+
+
+            </div>
+        <%}%>
+    </div>
+   
+</body>
+</html>

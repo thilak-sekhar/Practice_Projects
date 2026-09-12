@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>"TechVolution"</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .toast {
+          visibility: hidden;
+          min-width: 250px;
+          background-color: #333;
+          color: #fff;
+          text-align: center;
+          border-radius: 5px;
+          padding: 16px;
+          position: fixed;
+          z-index: 1;
+          left: 50%;
+          bottom: 30px;
+          transform: translateX(-50%);
+        }
+        .toast.show {
+          visibility: visible;
+          animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+        @keyframes fadein {
+          from {bottom: 0; opacity: 0;}
+          to {bottom: 30px; opacity: 1;}
+        }
+        @keyframes fadeout {
+          from {bottom: 30px; opacity: 1;}
+          to {bottom: 0; opacity: 0;}
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TECH VOLUTION 2k24</h1>
+        <form id="form">
+          
+<h2>Personal details:</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required placeholder="ENTER YOUR FULL NAME" >
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" required >
+            
+<label for="gender">Gender:</label>
+            <div id="gender-options">
+                <input type="radio" name="gender" value="male" required> Male
+                <input type="radio" name="gender" value="female" required> Female
+                <input type="radio" name="gender" value="non-binary" required> Non-binary
+            </div>
+            <h2>Contact:</h2>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required placeholder="ENTER YOUR EMAIL">
+            <label for="number">Number:</label>
+            <input type="text" id="number" pattern="[0-9]{10}" required placeholder="ENTER YOUR NUMBER" title="PHONE NUMBER SHOULD BE 10 DIGITS ONLY...">
+
+<h2>Address:</h2>
+
+            <label for="street">Street:</label>
+            <input type="text" id="street" required placeholder="ENTER YOUR STREET ADDRESS">
+            
+            <label for="city">City:</label>
+            <input type="text" id="city" required placeholder="ENTER YOUR CITY">
+
+            <label for="state"> State:</label>
+            <select id="state" required>
+                <option> Select State</option>
+
+                <option>Andhra Pradesh</option>
+                <option>Arunachal Pradesh</option>
+                <option>Assam</option>
+                <option>Bihar</option>
+                <option>Chhattisgarh</option>
+                <option>Goa</option>
+                <option>Gujarat</option>
+                <option>Haryana</option>
+                <option>Himachal Pradesh</option>
+                <option>Jammu and Kashmir</option>
+                <option>Jharkhand</option>
+                <option>Karnataka</option>
+                <option>Kerala</option>
+                <option>Madhya Pradesh</option>
+                <option>Maharashtra</option>
+                <option>Manipur</option>
+                <option>Meghalaya</option>
+                <option>Mizoram</option>
+                <option>Nagaland</option>
+                <option>Odisha</option>
+                <option>Punjab</option>
+                <option>Rajasthan</option>
+                <option>Sikkim</option>
+                <option>Tamil Nadu</option>
+                <option>Telangana</option>
+                <option>Tripura</option>
+                <option>Uttarakhand</option>
+                <option>Uttar Pradesh</option>
+                <option>West Bengal</option>
+                <option>Andaman and Nicobar Islands</option>
+                <option>Chandigarh</option>
+                <option>Dadra and Nagar Haveli</option>
+                <option> Daman and Diu</option>
+                <option>Delhi</option>
+                <option>Lakshadweep</option>
+                <option>Puducherry</option>
+            </select>
+            
+            <label for="zipcode">Zipcode:</label>
+            <input type="text" id="zipcode" pattern="[0-9]{6}" title="ZIP code should be 6 digits long...." required>
+
+<h2>Additional information:</h2>
+<div class="Preferences">
+<label for="pre" required>Event Preferences:</label> 
+<input class="pre1" type="checkbox" name="pre">10:00AM<br>
+<input class="pre2" type="checkbox" name="pre"> 2:00PM<br>
+<input class="pre3" type="checkbox" name="pre">4:00PM<br>
+</div>
+            <label for="food">Dietary Restrictions:</label>
+            <input type="text" id="food" required>
+
+            <label for="size">T-shirt Size</label>
+            <select class="form-select" aria-label="T-shirt Size">
+              <option selected>Size</option>
+              <option value="1">XXXL</option>
+              <option value="2">XXL</option>
+              <option value="3">XL</option>
+              <option value="4">L</option>
+              <option value="5">M</option>
+              <option value="6">S</option>
+            </select>
+            <div class="mb-3">
+                <button class="btn" type="submit" onclick="showToast()">Submit form</button>
+             </div> 
+        </form>
+        <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   
+    <div id="toast" class="toast">FORM SUBMITTED SUCCESFULLY</div>
+    <script>
+      function showToast() {
+        var toast = document.getElementById("toast");
+        toast.className = "toast show";
+        setTimeout(function(){
+          toast.className = toast.className.replace("show", "");
+        }, 3000);
+      }
+    </script>
+</body>
+</html>

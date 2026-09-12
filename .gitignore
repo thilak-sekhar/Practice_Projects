@@ -1,0 +1,41 @@
+# ---------- Environment / secrets ----------
+.env
+.env.local
+.env.*.local
+*.env
+
+# ---------- Node / npm (FSWD, pickup, todo, IDPST frontend) ----------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+
+# React build output (CRA) — regenerate with `npm run build`
+build/
+dist/
+
+# ---------- Python / Django (Gallery, IDPST backend) ----------
+venv/
+env/
+.venv/
+__pycache__/
+*.py[cod]
+*.sqlite3
+db.sqlite3
+staticfiles/
+media/
+*.log
+
+# Django migrations 
+*/migrations/*.py
+!*/migrations/__init__.py
+
+# ---------- IDE / OS ----------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---------- Misc practice-repo cruft ----------
+*.tmp

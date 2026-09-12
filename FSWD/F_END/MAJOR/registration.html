@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>"TechVolution"</title>
+    
+</head>
+<body style="background-image:url(IMAGE/homeback.jpg);">
+    <div class="container">
+        <h1>REGISTRATION</h1>
+        <form id="form">
+          
+<h2>Personal details:</h2>
+<form class="row g-3">
+    <div class="col-md-4">
+      <label for="validationDefault01" class="form-label">First name</label>
+      <input type="text" class="form-control" id="validationDefault01"  required placeholder="ENTER FIRST NAME ">
+    </div>
+    <div class="col-md-4">
+      <label for="validationDefault02" class="form-label">Last name</label>
+      <input type="text" class="form-control" id="validationDefault02"  required placeholder="ENTER LAST NAME ">
+    </div>
+    
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" required>
+            
+             <label>Gender:</label>
+            <div id="gender-options">
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female" required> Female</label>
+                <label><input type="radio" name="gender" value="non-binary" required>Other</label>
+            </div>
+<h2>Contact:</h2>
+            <label for="email">Email:</label>
+            <input type="email" id="email" equired placeholder="ENTER YOUR EMAIL">
+
+            <label for="number">Number:</label>
+            <input type="number" id="number"  required placeholder="ENTER YOUR NUMBER">
+
+            <label for="number">Alternative number:</label>
+            <input type="number" id="number"  required placeholder="ENTER YOUR ALTERNATIVE NUMBER">
+
+<h2>Address:</h2>
+
+            <label for="door">Door no:</label>
+            <input type="text" id="door" equired placeholder="ENTER YOUR DOOR NO">
+
+            <label for="street">Street:</label>
+            <input type="text" id="street" equired placeholder="ENTER YOUR ADDRESS">
+            
+            <label for="landmark">Landmark:</label>
+            <input type="text" id="landmark" equired placeholder="ENTER NEARBY LANDMARK">
+
+            <label for="city">City:</label>
+            <input type="text" id="city" equired placeholder="ENTER YOUR CITY">
+
+            <label for="district">District:</label>
+            <input type="text" id="district" equired placeholder="ENTER YOUR DISTRICT">
+
+
+            <label for="state"> State:</label>
+            <select id="state" required>
+                <option> Select State</option>
+
+                <option>Andhra Pradesh</option>
+                <option>Arunachal Pradesh</option>
+                <option>Assam</option>
+                <option>Bihar</option>
+                <option>Chhattisgarh</option>
+                <option>Goa</option>
+                <option>Gujarat</option>
+                <option>Haryana</option>
+                <option>Himachal Pradesh</option>
+                <option>Jammu and Kashmir</option>
+                <option>Jharkhand</option>
+                <option>Karnataka</option>
+                <option>Kerala</option>
+                <option>Madhya Pradesh</option>
+                <option>Maharashtra</option>
+                <option>Manipur</option>
+                <option>Meghalaya</option>
+                <option>Mizoram</option>
+                <option>Nagaland</option>
+                <option>Odisha</option>
+                <option>Punjab</option>
+                <option>Rajasthan</option>
+                <option>Sikkim</option>
+                <option>Tamil Nadu</option>
+                <option>Telangana</option>
+                <option>Tripura</option>
+                <option>Uttarakhand</option>
+                <option>Uttar Pradesh</option>
+                <option>West Bengal</option>
+                <option>Andaman and Nicobar Islands</option>
+                <option>Chandigarh</option>
+                <option>Dadra and Nagar Haveli and Daman and Diu</option>
+                <option>Delhi</option>
+                <option>Lakshadweep</option>
+                <option>Puducherry</option>
+            </select>
+            
+            <label for="zipcode">Zipcode:</label>
+            <input type="text" id="zipcode" pattern="[0-9]{6}" title="ZIP code should be 6 digits long" equired placeholder="ENTER YOUR ZIPCODE">
+<h2>Sign up:</h2> 
+            <div class="col-md-4">
+                <label for="validationDefaultUsername" class="form-label">Username</label>
+                <div class="input-group">
+                  <span class="input-group-text" id="inputGroupPrepend2"></span>
+                  <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required placeholder="CREATE A USERNAME">
+                </div>
+              </div>
+
+             
+            <label for="pass"> New password:</label>
+            <input type="password" id="pass"  required placeholder="CREATE A PASSWORD">
+
+            <label for="pass">Re-enter password:</label>
+            <input type="password" id="pass"  required placeholder="ENTER PASSWORD AGAIN"><br>
+
+        
+            <input type="checkbox" required> Agree Terms and Conditions
+              
+
+            <button type="submit">Sumbit</button>
+            
+        </form>
+        <!--color change chey-->
+    <style>body {
+      font-family: Arial, sans-serif;ko
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+  }
+  
+  .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color:#64d3db;
+      border-radius: 8px;
+      box-shadow: 0 0 100px rgba(216, 220, 220, 0.1);
+  }
+  
+  h1 {
+      text-align: center;
+      color: #333;
+  }
+  
+  h2 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color: #555;
+  }
+  
+  label {
+      display: block;
+      margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="date"],
+  input[type="password"],
+ 
+  
+  select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #5ac3ca;
+      border-radius: 5px;
+      box-sizing: border-box;
+  }
+  
+  select[multiple] {
+      height: auto;
+  }
+  
+  button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #3117de;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+      background-color: #8362ef;
+  }</style>
+</html>
